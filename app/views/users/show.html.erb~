@@ -20,7 +20,7 @@ Questions: <%= @user.questions.count %> <br />
 
 </p>
 <p>
-Answers: <%= @user.answers.count %> <br />
+Answers: <%= @user.questions.count %> <br />
 <% @user.answers.each do |a| %>
 	<%= link_to 'Show', a %>
 	<%= a.body %>
