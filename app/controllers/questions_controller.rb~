@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
 	if params[:user_id].nil?
 		@questions = Question.all
 	else
-		@questions = User.find(params[:user_id]).questions
+		@questions = Question.find(params[:user_id])
 	end
 
     respond_to do |format|
