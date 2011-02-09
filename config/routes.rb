@@ -11,6 +11,7 @@ Tmiw3::Application.routes.draw do
 	  resources :questions do
 	  	resources :answers
 	  end
+          resources :answers
   end
 
   # The priority is based upon order of creation:
