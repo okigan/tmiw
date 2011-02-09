@@ -8,8 +8,6 @@
 </head>
 <body>
 	<%= link_to "Users", users_path %>
-	<%= link_to "Questions", questions_path %>
-	<%= link_to "Answers", answers_path %>
 <%= yield %>
 
 </body>
