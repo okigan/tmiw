@@ -1,5 +1,6 @@
 Tmiw3::Application.routes.draw do
-	root :to => "questions#index"
+ 	root :to => "questions#index"
+       	resources :reviews
 
   resources :answers
 
