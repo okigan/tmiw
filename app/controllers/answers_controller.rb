@@ -29,7 +29,7 @@ class AnswersController < ApplicationController
   # GET /answers/new
   # GET /answers/new.xml
   def new
-    @answer = Answer.new
+    @answer = Answer.new(:question_id => params[:question_id])
 
     respond_to do |format|
       format.html # new.html.erb
