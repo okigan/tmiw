@@ -5,7 +5,9 @@ Tmiw3::Application.routes.draw do
   resources :answers
 
   resources :questions do
-	  resources :answers
+	  resources :answers do
+		  resources :reviews
+	  end
   end
 
   resources :users do
@@ -13,6 +15,7 @@ Tmiw3::Application.routes.draw do
 	  	resources :answers
 	  end
           resources :answers
+	  resources :reviews
   end
 
   # The priority is based upon order of creation:
