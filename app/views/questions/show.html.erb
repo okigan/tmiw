@@ -1,15 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Body:</b>
-  <%= @question.body %>
+<b>Body:</b>
+<%= @question.body %>
 </p>
 
 <p>
-  <b>User:</b>
-  <%= @question.user_id %>
+<b>User:</b>
+<%= @question.user_id %>
 </p>
 
+<p>
+Answers: <%= @question.answers.count %> <br />
+<% @question.answers.each do |a| %>
+	<%= link_to 'Show', a %>
+	<%= a.body %>
+	<br />
+<% end %>
+</p>
 
 <%= link_to 'Answer', new_question_answer_path(@question) %>
 <%= link_to 'Edit', edit_question_path(@question) %> |

@@ -16,6 +16,8 @@
     <td><%= link_to 'Show', answer %></td>
     <td><%= link_to 'Edit', edit_answer_path(answer) %></td>
     <td><%= link_to 'Destroy', answer, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'View Question', answer.question  %></td>
+
   </tr>
 <% end %>
 </table>
