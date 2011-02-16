@@ -2,11 +2,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.xml
   def index
-	if params[:user_id].nil?
-		@questions = Question.all
-	else
-		@questions = User.find(params[:user_id]).questions
-	end
+    @questions = Question.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,7 +24,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   # GET /questions/new.xml
   def new
-    @question = Question.new(:user_id => params[:user_id])
+    @question = Question.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,8 +40,7 @@ class QuestionsController < ApplicationController
   # POST /questions
   # POST /questions.xml
   def create
-#    @question = Question.new(:user_id => params[:question][:user_id], :body => params[:question][:body])
-   @question = Question.new(params[:question])
+    @question = Question.new(params[:question])
 
     respond_to do |format|
       if @question.save

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @problem.user_id %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @problem.body %>
+</p>
+
+Solutions:
+<%= render :action => 'solutions/list_solutions_summary', :locals => { :solutions => @problem.solutions } %>
+<%= link_to 'Edit', edit_problem_path(@problem) %> |
+<%= link_to 'Back', problems_path %>

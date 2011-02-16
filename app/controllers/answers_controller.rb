@@ -2,12 +2,7 @@ class AnswersController < ApplicationController
   # GET /answers
   # GET /answers.xml
   def index
-	  if params[:user_id].nil?
-    		@answers = Answer.all
-	else
-		@answers = User.find(params[:user_id]).answers
-	end
-
+    @answers = Answer.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,7 +24,7 @@ class AnswersController < ApplicationController
   # GET /answers/new
   # GET /answers/new.xml
   def new
-    @answer = Answer.new(:question_id => params[:question_id])
+    @answer = Answer.new
 
     respond_to do |format|
       format.html # new.html.erb

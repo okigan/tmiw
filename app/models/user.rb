@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
-	has_many :questions
-	has_many :answers
+	has_many :problems
+	has_many :solutions
+	has_many :feedback
+	
 end

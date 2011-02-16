@@ -1,8 +1,10 @@
+<h1>Listing answers</h1>
+
 <table>
   <tr>
-    <th>Body</th>
     <th>User</th>
     <th>Question</th>
+    <th>Body</th>
     <th></th>
     <th></th>
     <th></th>
@@ -10,14 +12,12 @@
 
 <% @answers.each do |answer| %>
   <tr>
-    <td><%= answer.body %></td>
     <td><%= answer.user_id %></td>
     <td><%= answer.question_id %></td>
+    <td><%= answer.body %></td>
     <td><%= link_to 'Show', answer %></td>
     <td><%= link_to 'Edit', edit_answer_path(answer) %></td>
     <td><%= link_to 'Destroy', answer, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= link_to 'View Question', answer.question  %></td>
-
   </tr>
 <% end %>
 </table>

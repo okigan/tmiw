@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-Tmiw3::Application.initialize!
+Tmiw4::Application.initialize!

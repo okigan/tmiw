@@ -1,7 +1,8 @@
+<h1>Listing questions</h1>
+
 <table>
   <tr>
     <th>Body</th>
-    <th>User</th>
     <th></th>
     <th></th>
     <th></th>
@@ -10,12 +11,10 @@
 <% @questions.each do |question| %>
   <tr>
     <td><%= question.body %></td>
-    <td><%= question.user_id %></td>
     <td><%= link_to 'Show', question %></td>
     <td><%= link_to 'Edit', edit_question_path(question) %></td>
     <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= link_to 'Answer', new_question_answer_path(question) %></td>
- </tr>
+  </tr>
 <% end %>
 </table>
 

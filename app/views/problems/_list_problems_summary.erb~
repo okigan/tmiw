@@ -1,0 +1,3 @@
+<% problems.each do |problem| %>
+<%= problem.body %>
+<% end %>

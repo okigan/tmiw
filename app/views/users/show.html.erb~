@@ -10,24 +10,7 @@
   <%= @user.email %>
 </p>
 
-<p>
-Questions: <%= @user.questions.count %> <br />
-<% @user.questions.each do |q| %>
-	<%= link_to 'Show', q %>
-	<%= q.body %>
-	<br />
-<% end %>
 
-</p>
-<p>
-Answers: <%= @user.answers.count %> <br />
-<% @user.answers.each do |a| %>
-	<%= link_to 'Show', a %>
-	<%= a.body %>
-	<br />
-<% end %>
-</p>
-
-<%= link_to 'Ask question', new_user_question(@user) %>
+<%= render :partial => 'problems/list_problems_summary', :locals => { :problems => @user.problems } %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
