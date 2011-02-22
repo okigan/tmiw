@@ -1,0 +1,2 @@
+module QuestionCorrelationsHelper
+end

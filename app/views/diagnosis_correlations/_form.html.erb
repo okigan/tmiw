@@ -1,0 +1,33 @@
+<%= form_for(@diagnosis_correlation) do |f| %>
+  <% if @diagnosis_correlation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@diagnosis_correlation.errors.count, "error") %> prohibited this diagnosis_correlation from being saved:</h2>
+
+      <ul>
+      <% @diagnosis_correlation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :question_id %><br />
+    <%= f.text_field :question_id %>
+  </div>
+  <div class="field">
+    <%= f.label :answer_variant_id %><br />
+    <%= f.text_field :answer_variant_id %>
+  </div>
+  <div class="field">
+    <%= f.label :diagnosis_id %><br />
+    <%= f.text_field :diagnosis_id %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br />
+    <%= f.text_field :points %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

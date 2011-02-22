@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  user_id: 1
-  solution_id: 1
   body: MyText
+  user_id: 1
+  treatment_id: 1
 
 two:
-  user_id: 1
-  solution_id: 1
   body: MyText
+  user_id: 1
+  treatment_id: 1

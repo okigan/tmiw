@@ -1,0 +1,2 @@
+module DiagnosisCorrelationsHelper
+end

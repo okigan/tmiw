@@ -10,11 +10,20 @@
   <%= @user.email %>
 </p>
 
-Posted problems:
-<%= render :partial => 'problems/list_problems_summary', :locals => { :problems => @user.problems } %>
+Answered questions:
+<ul>
+  <% @user.answers.each do |a| %>
+		<li>Question: <%= a.question.body %> Answer: <%= a.body %></li>
+   <% end %>
+</ul>
 
-Posted solutions:
-<%= render :partial => 'solutions/list_solutions_summary', :locals => { :solutions => @user.solutions } %>
+
+Follow up questions:
+<ul>
+  <% @followup_questions.each do |q| %>
+		<li>Question: <%= q.body %> <%= link_to 'Answer', new_answer_path %> </li>
+   <% end %>
+</ul>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

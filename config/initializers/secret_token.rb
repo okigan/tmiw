@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Tmiw4::Application.config.secret_token = '3a7d65fdf51123e1c3043feae3e378ce754ab5edef61ffcc34a02bebf5edcc6d7cc806b7d49e99c35787f42c13b0ca4566aca8f99e395611df471a65854aabe3'
+Tmiw8::Application.config.secret_token = 'faaa58550ed43ac89611e97ad82a928a0dbac2361cc30507ba3fc25959f132859c1477d0278ee69d4217212688f54cb250a518a40738eb259ba6d0b1eb52bebe'

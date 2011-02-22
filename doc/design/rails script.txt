@@ -1,0 +1,31 @@
+rails new tmiw8
+cd tmiw8
+
+git init
+git config --global user.name "Igor Okulist"
+git config --global user.email "okigan@yahoo.com"
+git add .
+git commit -a -m "Initial commit"
+
+rails generate scaffold User          name:string email:string
+rails generate scaffold Question      body:text
+rails generate scaffold AnswerVariant body:string
+rails generate scaffold Answer        user_id:integer question_id:integer answer_variant_id:integer body:text
+rails generate scaffold Diagnosis     body:text
+rails generate scaffold Treatment     body:text treatment_id:integer
+rails generate scaffold Feedback      body:text user_id:integer treatment_id:integer
+
+
+rails generate scaffold DiagnosisCorrelation question_id:integer answer_variant_id:integer diagnosis_id:integer points:integer
+rails generate scaffold QuestionCorrelation  question_id:integer followup_question_id:integer points:integer
+
+
+rails generate controller home
+
+rake db:migrate
+rails server
+
+#rails generate controller QuestionCorrelation  index show new edit create update destroy
+
+#rails generate migration AddFollowUpQuestionToQuestionCorrelation followup_question_id:integer
+#rails generate migration RemoveFollowUpQuestionToQuestionCorrelation followup_question_id:integer

@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Solution</th>
     <th>Body</th>
+    <th>User</th>
+    <th>Treatment</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,9 +12,9 @@
 
 <% @feedbacks.each do |feedback| %>
   <tr>
-    <td><%= feedback.user_id %></td>
-    <td><%= feedback.solution_id %></td>
     <td><%= feedback.body %></td>
+    <td><%= feedback.user_id %></td>
+    <td><%= feedback.treatment_id %></td>
     <td><%= link_to 'Show', feedback %></td>
     <td><%= link_to 'Edit', edit_feedback_path(feedback) %></td>
     <td><%= link_to 'Destroy', feedback, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -1,0 +1,29 @@
+<h1>Listing diagnosis_correlations</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer variant</th>
+    <th>Diagnosis</th>
+    <th>Points</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diagnosis_correlations.each do |diagnosis_correlation| %>
+  <tr>
+    <td><%= diagnosis_correlation.question_id %></td>
+    <td><%= diagnosis_correlation.answer_variant_id %></td>
+    <td><%= diagnosis_correlation.diagnosis_id %></td>
+    <td><%= diagnosis_correlation.points %></td>
+    <td><%= link_to 'Show', diagnosis_correlation %></td>
+    <td><%= link_to 'Edit', edit_diagnosis_correlation_path(diagnosis_correlation) %></td>
+    <td><%= link_to 'Destroy', diagnosis_correlation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diagnosis correlation', new_diagnosis_correlation_path %>

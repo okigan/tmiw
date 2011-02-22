@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Body:</b>
+  <%= @diagnosis.body %>
+</p>
+
+Treatments(<%= @diagnosis.treatments.count %>):
+<ul>
+	<% @diagnosis.treatments.each do |treatment| %>
+	<li><%= treatment.body %></li>
+	<% end %>
+</ul>
+
+<%= link_to 'Edit', edit_diagnosis_path(@diagnosis) %> |
+<%= link_to 'Back', diagnoses_path %>

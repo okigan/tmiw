@@ -10,27 +10,50 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110212071351) do
+ActiveRecord::Schema.define(:version => 20110222060302) do
+
+  create_table "answer_variants", :force => true do |t|
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "answers", :force => true do |t|
     t.integer  "user_id"
     t.integer  "question_id"
+    t.integer  "answer_variant_id"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "diagnoses", :force => true do |t|
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "diagnosis_correlations", :force => true do |t|
+    t.integer  "question_id"
+    t.integer  "answer_variant_id"
+    t.integer  "diagnosis_id"
+    t.integer  "points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "feedbacks", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "solution_id"
     t.text     "body"
+    t.integer  "user_id"
+    t.integer  "treatment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "problems", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "body"
+  create_table "question_correlations", :force => true do |t|
+    t.integer  "question_id"
+    t.integer  "followup_question_id"
+    t.integer  "points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,12 +64,11 @@ ActiveRecord::Schema.define(:version => 20110212071351) do
     t.datetime "updated_at"
   end
 
-  create_table "solutions", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "problem_id"
+  create_table "treatments", :force => true do |t|
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "diagnosis_id"
   end
 
   create_table "users", :force => true do |t|

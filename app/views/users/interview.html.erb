@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+
+Answered questions:
+<ul>
+  <% @user.answers.each do |a| %>
+		<li>Question: <%= a.question.body %> Answer: <%= a.body %></li>
+   <% end %>
+</ul>
+
+Suggested questions:
+<ul>
+<% @questions.each do |question| %>
+    <li> <span><%=question.body%></span> <span><%= link_to 'Answer', new_answer_path %></span></li>
+<% end %>
+</ul>

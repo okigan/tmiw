@@ -4,6 +4,7 @@
   <tr>
     <th>User</th>
     <th>Question</th>
+    <th>Answer variant</th>
     <th>Body</th>
     <th></th>
     <th></th>
@@ -14,6 +15,7 @@
   <tr>
     <td><%= answer.user_id %></td>
     <td><%= answer.question_id %></td>
+    <td><%= answer.answer_variant_id %></td>
     <td><%= answer.body %></td>
     <td><%= link_to 'Show', answer %></td>
     <td><%= link_to 'Edit', edit_answer_path(answer) %></td>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @question_correlation.question_id %>
+</p>
+
+<p>
+  <b>Followup question:</b>
+  <%= @question_correlation.followup_question_id %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @question_correlation.points %>
+</p>
+
+
+<%= link_to 'Edit', edit_question_correlation_path(@question_correlation) %> |
+<%= link_to 'Back', question_correlations_path %>

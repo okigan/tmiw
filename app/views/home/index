@@ -1,0 +1,38 @@
+<h1>
+	Main homepage.
+</h1>
+
+<p>
+	Login/Logout/Signup
+</p>
+
+<ul id="main_page_list">
+<li id="active_treaments">
+	User's active treaments:
+	<ul>
+	<li>Lorem ipsum.</li>
+	<li>Dolor sit.</li>
+	<li>Consectetuer.</li>
+	<li>Adipiscing elit.</li>
+	<li>Diam.</li>	
+	</ul>
+</li>
+
+<li id="pending_feedback">
+	Pending feedback:
+	<ul>
+	<li>Adipiscing elit.</li>
+	<li>Diam.</li>
+	<li>Nonummy nibh.</li>
+	<li>Tincidunt.</li>
+	</ul>
+</li>
+
+<li id="new_followup_questions">
+	New follow up questions: 
+	<ul>
+	<li>Lorem ipsum?</li>
+	<li>Dolor sit?</li>
+	<li>Consectetuer?</li>
+	</ul>
+</li>

@@ -1,5 +1,0 @@
-<% solutions.each do |solution| %>
-<ul>
-	<li><%= solution.body %></li>
-</ul>
-<% end %>

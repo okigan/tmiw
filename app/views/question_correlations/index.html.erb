@@ -1,0 +1,27 @@
+<h1>Listing question_correlations</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Followup question</th>
+    <th>Points</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @question_correlations.each do |question_correlation| %>
+  <tr>
+    <td><%= question_correlation.question_id %></td>
+    <td><%= question_correlation.followup_question_id %></td>
+    <td><%= question_correlation.points %></td>
+    <td><%= link_to 'Show', question_correlation %></td>
+    <td><%= link_to 'Edit', edit_question_correlation_path(question_correlation) %></td>
+    <td><%= link_to 'Destroy', question_correlation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Question correlation', new_question_correlation_path %>

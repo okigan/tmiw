@@ -1,0 +1,23 @@
+<h1>Listing answer_variants</h1>
+
+<table>
+  <tr>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @answer_variants.each do |answer_variant| %>
+  <tr>
+    <td><%= answer_variant.body %></td>
+    <td><%= link_to 'Show', answer_variant %></td>
+    <td><%= link_to 'Edit', edit_answer_variant_path(answer_variant) %></td>
+    <td><%= link_to 'Destroy', answer_variant, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Answer variant', new_answer_variant_path %>

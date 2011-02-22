@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @diagnosis_correlation.question_id %>
+</p>
+
+<p>
+  <b>Answer variant:</b>
+  <%= @diagnosis_correlation.answer_variant_id %>
+</p>
+
+<p>
+  <b>Diagnosis:</b>
+  <%= @diagnosis_correlation.diagnosis_id %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= @diagnosis_correlation.points %>
+</p>
+
+
+<%= link_to 'Edit', edit_diagnosis_correlation_path(@diagnosis_correlation) %> |
+<%= link_to 'Back', diagnosis_correlations_path %>
