@@ -13,12 +13,13 @@
 
   <div class="field">
     <%= f.label :question_id %><br />
-    <%= f.text_field :question_id %>
+    <%= select("question_correlation", "question_id", Question.all.collect { |q| [q.id.to_s + " " + q.body, q.id] } ) %>
   </div>
   <div class="field">
     <%= f.label :followup_question_id %><br />
-    <%= f.text_field :followup_question_id %>
+    <%= select("question_correlation", "followup_question_id", Question.all.collect { |q| [q.id.to_s + " " + q.body, q.id] } ) %>
   </div>
+  
   <div class="field">
     <%= f.label :points %><br />
     <%= f.text_field :points %>

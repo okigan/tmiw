@@ -3,11 +3,17 @@
 <p>
   <b>Question:</b>
   <%= @question_correlation.question_id %>
+ #<%= @question_correlation.question_id %> -- 
+  <%= @question_correlation.question.body %>
+
 </p>
 
 <p>
   <b>Followup question:</b>
   <%= @question_correlation.followup_question_id %>
+ #<%= @question_correlation.followup_question_id %> -- 
+  <%= @question_correlation.followup_question.body %>
+
 </p>
 
 <p>
