@@ -15,13 +15,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @answered_questions = @user.answered_questions
-	#@followup_questions = [@answered_questions.first.question_correlations.first.followup_question]
+    @followup_questions = @user.followup_questions
+    #@followup_questions = [@answered_questions.first.question_correlations.first.followup_question]
 	
 	#super over simplified logic to find other correlated questions (too much code even for this)
-	@question_correlations = []
-	@answered_questions.each do |q| @question_correlations.concat(q.question_correlations) end
-	@followup_questions = []
-	@question_correlations.each do |qc| @followup_questions << qc.followup_question end
+	#@question_correlations = []
+	#@answered_questions.each do |q| @question_correlations.concat(q.question_correlations) end
+	#@followup_questions = []
+	#@question_correlations.each do |qc| @followup_questions << qc.followup_question end
 
     respond_to do |format|
       format.html # show.html.erb
