@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :question_id %><br />
-    <%= f.text_field :question_id %>
+    <%= select("answer", "question_id", Question.all.collect { |q| [q.id.to_s + " " + q.body, q.id] } ) %>
   </div>
   <div class="field">
     <%= f.label :answer_variant_id %><br />
