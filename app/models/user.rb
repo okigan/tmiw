@@ -1,4 +1,16 @@
 class User < ActiveRecord::Base
+    has_many :subscriptions
+    has_many :reverse_subscriptions,
+        :as => :subscribable, 
+        :foreign_key => " subscribable_id", 
+        :class_name => "Subscription", 
+        :dependent => :destroy
+    has_many :subscribers, 
+            :through => :reverse_subscriptions, 
+            :class_name => "User",
+            :source => :user
+    #has_many :followers, :through => :subscriptions, :source => "followed_id"
+    
 	has_many :answers
 	
 	has_many :answered_questions, :through => :answers, :source => :question

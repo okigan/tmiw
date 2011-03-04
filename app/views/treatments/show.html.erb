@@ -6,5 +6,15 @@
 </p>
 
 
+<p>Subscribers:<%= @treatment.subscribers.count %>
+</p>
+<ul>
+<% @treatment.subscribers.each do |subscriber| %>
+<li>
+<%= subscriber.name %>
+</li>
+<% end %>
+</ul>
+
 <%= link_to 'Edit', edit_treatment_path(@treatment) %> |
 <%= link_to 'Back', treatments_path %>

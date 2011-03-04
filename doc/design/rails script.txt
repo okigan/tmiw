@@ -21,11 +21,14 @@ rails generate scaffold QuestionCorrelation  question_id:integer followup_questi
 
 
 rails generate controller home
+rails generate migration AddSubscriptionIdToUser subsciption_id:integer
+rails generate scaffold Subscription user_id:integer subscribable_id:integer 
+rails generate migration AddTypeToSubscription subscribable_type:string
 
 rake db:migrate
 rails server
 
 #rails generate controller QuestionCorrelation  index show new edit create update destroy
 
-#rails generate migration AddFollowUpQuestionToQuestionCorrelation followup_question_id:integer
+#
 #rails generate migration RemoveFollowUpQuestionToQuestionCorrelation followup_question_id:integer

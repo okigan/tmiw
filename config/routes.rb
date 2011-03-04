@@ -1,4 +1,6 @@
 Tmiw8::Application.routes.draw do
+  resources :subscriptions
+
   match '/', :controller => 'home', :action => 'index'
 
   resources :question_correlations
@@ -7,7 +9,9 @@ Tmiw8::Application.routes.draw do
 
   resources :feedbacks
 
-  resources :treatments
+  resources :treatments do
+    resources :subscribers
+  end
 
   resources :diagnoses
 
